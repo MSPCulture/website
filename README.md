@@ -10,8 +10,6 @@ Static site for MSP Culture. Plain HTML/CSS, no build step. Hosted on Cloudflare
 ## Editing
 Ask Claude: "Add the <kit> to the toolkits section of mspculture.com." Changes go on a branch, you review the preview link, then merge.
 
-## Placeholders to replace
-- `GUMROAD_ONBOARDING_URL`: Gumroad link for the onboarding kit (or the free "get notified" listing)
-- `BOOKING_URL`: Calendly / Microsoft Bookings link
-- `CONTACT_EMAIL`: business email address
-- `LINKEDIN_URL`: MSP Culture LinkedIn page
+## Pending
+- Onboarding kit card shows "Coming soon" until the Gumroad link exists
+- Booking link and LinkedIn link not added yet

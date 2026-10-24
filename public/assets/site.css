@@ -162,3 +162,5 @@ footer{border-top:1px solid var(--hairline);padding:var(--s4) 0 var(--s8)}
   .events td{display:block;border:0;padding:2px 0}
   .kit .btn{width:100%;text-align:center}
 }
+.tag.key{background:var(--magenta);color:var(--on-accent);margin-left:8px;vertical-align:2px;display:inline-block}
+@media (min-width:601px){.events{table-layout:fixed}.events td:nth-child(1),.events th:nth-child(1){width:72px}.events td:nth-child(2),.events th:nth-child(2){width:36%}}

@@ -7,6 +7,7 @@ Static site for MSP Culture. Plain HTML/CSS, no build step. Hosted on Cloudflare
 - `public/assets/`: logo (from the MSP Culture design system), headshot, social preview image
 - `public/_headers`: security headers
 - `wrangler.jsonc`: Cloudflare config (serves `public/` as static assets)
+- `src/index.js`: redirects www.mspculture.com to mspculture.com (301), then serves the site
 
 ## Editing
 Ask Claude: "Add the <kit> to the toolkits section of mspculture.com." Changes go on a branch, you review the preview link, then merge.

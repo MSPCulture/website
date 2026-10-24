@@ -122,14 +122,33 @@ footer{border-top:1px solid var(--hairline);padding:var(--s4) 0 var(--s8)}
   .nav ul li:not(:last-child){display:none}
 }
 @media (max-width:600px){
-  .wrap{padding:0 var(--s2)}
-  .hero{padding:var(--s4) 0 var(--s8)}
-  .hero-grid{padding-left:52px}
-  .stripes{left:12px;width:32px}
-  .stripes i{width:10px}.stripes i:last-child{left:16px}
-  h2{font-size:34px}
-  .hero p.lead{font-size:19px;line-height:29px}
+  body{font-size:17px;line-height:26px}
+  .wrap{padding:0 20px}
+  .nav{height:60px}
   .nav-logo img{height:40px}
+  .nav .btn-sm{font-size:13px;padding:9px 12px 8px}
+  .hero{padding:40px 0 48px}
+  .hero-logo{display:none}
+  .hero-grid{padding-left:28px}
+  .stripes{left:8px;width:20px}
+  .stripes i{width:6px}.stripes i:last-child{left:10px}
+  .lockup{font-size:clamp(24px,7vw,40px);line-height:1}
+  .hero p.lead{font-size:18px;line-height:28px;margin:24px 0 28px}
+  .cta-row{flex-direction:column;gap:12px}
+  .cta-row .btn{text-align:center;width:100%}
+  section{padding:48px 0}
+  .sec-head{margin-bottom:24px}
+  h2{font-size:30px;line-height:1.1}
+  h3{font-size:22px}
+  .grid,.svc{gap:12px}
+  .card{padding:24px 20px;gap:10px}
+  .card .btn{align-self:stretch;text-align:center}
+  .headshot{max-width:180px}
+  .about{gap:24px}
+  .creds li{font-size:13px;padding:5px 8px 4px}
+  .closing h2{font-size:36px}
+  .foot{flex-direction:column;align-items:flex-start;gap:20px}
+  .slashes{display:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>

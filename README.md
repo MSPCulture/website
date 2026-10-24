@@ -13,4 +13,4 @@ Ask Claude: "Add the <kit> to the toolkits section of mspculture.com." Changes g
 
 ## Pending
 - Onboarding kit card shows "Coming soon" until the Gumroad link exists
-- Booking link and LinkedIn link not added yet
+- Booking link not added yet

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MSP Culture</title>
+<meta name="description" content="Toolkits, training and fractional leadership for MSPs. Company culture × technical operations, from Jordan Silva.">
+<meta property="og:title" content="MSP Culture">
+<meta property="og:description" content="Toolkits, training and fractional leadership for MSPs. Company culture × technical operations.">
+<meta property="og:image" content="https://mspculture.com/assets/og-image.jpg">
+<meta property="og:url" content="https://mspculture.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/avatar.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#000;--surface-raised:#1a1a1a;--hairline:#333;
+  --ink:#fff;--ink-muted:#a6a6a6;
+  --cyan:#38b6ff;--magenta:#ff009d;--yellow:#ffff33;--on-accent:#000;
+  --font-display:"Roboto Condensed","Arial Narrow",sans-serif;
+  --font-sans:Aptos,Arial,Helvetica,sans-serif;
+  --s1:8px;--s2:16px;--s4:32px;--s8:64px;
+  --max:1120px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--font-sans);font-size:18px;line-height:28px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--cyan)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--s4)}
+.label{font-family:var(--font-sans);font-size:13px;line-height:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--magenta);margin:0 0 var(--s2)}
+h1,h2,h3{font-family:var(--font-display);margin:0}
+h2{font-size:44px;line-height:1.05;font-weight:700}
+h3{font-size:26px;line-height:1.15;font-weight:700}
+.muted{color:var(--ink-muted)}
+.em{color:var(--magenta)}
+
+/* buttons */
+.btn{display:inline-block;font-family:var(--font-display);font-weight:700;font-size:18px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:14px 22px 12px;border-radius:4px;border:2px solid transparent;line-height:1}
+.btn-primary{background:var(--magenta);color:var(--on-accent)}
+.btn-primary:hover{background:#ff3db3}
+.btn-ghost{border-color:var(--cyan);color:var(--cyan)}
+.btn-ghost:hover{background:var(--cyan);color:var(--on-accent)}
+.btn-sm{font-size:15px;padding:10px 16px 9px}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(0,0,0,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--hairline)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);height:72px}
+.nav-logo img{height:60px;width:auto}
+.nav ul{display:flex;gap:var(--s4);list-style:none;margin:0;padding:0;align-items:center}
+.nav ul a{color:var(--ink);text-decoration:none;font-family:var(--font-display);font-size:17px;letter-spacing:.06em;text-transform:uppercase}
+.nav ul a:hover{color:var(--cyan)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:var(--s8) 0 calc(var(--s8) + var(--s4))}
+.stripes{position:absolute;top:0;bottom:0;left:max(16px,calc((100vw - var(--max))/2 - 40px));width:40px;pointer-events:none}
+.stripes i{position:absolute;top:0;bottom:0;width:var(--s2)}
+.stripes i:first-child{left:0;background:var(--cyan)}
+.stripes i:last-child{left:24px;background:var(--magenta)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,380px);gap:var(--s8);align-items:center;padding-left:var(--s8)}
+.lockup{font-family:var(--font-display);text-transform:uppercase;font-size:clamp(26px,3.7vw,54px);line-height:.95;margin:0}
+.lockup .l{font-weight:300;color:var(--cyan)}
+.lockup .b{font-weight:700;color:var(--magenta)}
+.lockup .x{display:block;color:var(--yellow);font-weight:700;font-size:.6em;line-height:1.3}
+.hero p.lead{font-size:21px;line-height:32px;max-width:34ch;margin:var(--s4) 0}
+.cta-row{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.hero-logo{width:100%;height:auto;max-width:380px;margin-left:auto}
+
+/* sections */
+section{padding:var(--s8) 0;border-top:1px solid var(--hairline)}
+.sec-head{max-width:640px;margin-bottom:var(--s4)}
+.sec-head p{margin:var(--s2) 0 0;color:var(--ink-muted)}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:var(--s2)}
+.card{background:var(--surface-raised);padding:var(--s4) 28px;display:flex;flex-direction:column;gap:12px;border-top:4px solid var(--cyan)}
+.card.paid{border-top-color:var(--magenta)}
+.card p{margin:0;color:var(--ink-muted);font-size:16px;line-height:25px;flex:1}
+.tag{align-self:flex-start;font-size:12px;line-height:1;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 8px 5px;border-radius:4px;background:var(--cyan);color:var(--on-accent)}
+.paid .tag{background:var(--magenta)}
+.card .btn{align-self:flex-start;margin-top:8px}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s2)}
+.svc .card{border-top-color:var(--magenta)}
+.svc ul{margin:0;padding-left:20px;color:var(--ink-muted);font-size:16px;line-height:25px;flex:1}
+
+/* about */
+.about{display:grid;grid-template-columns:320px 1fr;gap:var(--s8);align-items:center}
+.headshot{width:100%;height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px var(--hairline)}
+.about p{margin:0 0 var(--s2)}
+.creds{display:flex;flex-wrap:wrap;gap:var(--s1);list-style:none;padding:0;margin:var(--s4) 0 0}
+.creds li{font-family:var(--font-display);font-size:15px;letter-spacing:.04em;border:1px solid var(--hairline);padding:6px 10px 5px;line-height:1}
+
+/* closing */
+.closing{text-align:left}
+.closing h2{font-size:clamp(40px,6vw,64px);text-transform:uppercase}
+.closing p{max-width:52ch;color:var(--ink-muted);margin:var(--s2) 0 var(--s4)}
+
+/* footer */
+footer{border-top:1px solid var(--hairline);padding:var(--s4) 0 var(--s8)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--s4)}
+.handle{font-size:18px;color:var(--ink)}
+.handle .c{color:var(--cyan)}.handle .m{color:var(--magenta)}
+.foot nav{display:flex;gap:var(--s4);flex-wrap:wrap}
+.foot nav a{color:var(--ink);text-decoration:none;font-size:16px}
+.foot nav a:hover{color:var(--cyan)}
+.slashes{font-family:var(--font-display);font-weight:700;letter-spacing:.1em;color:var(--ink)}
+.copy{font-size:14px;line-height:20px;color:var(--ink-muted);margin-top:var(--s2)}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:var(--s4)}
+  .lockup{font-size:clamp(26px,7.2vw,60px)}
+  .hero-logo{margin:0;max-width:300px;order:-1}
+  .svc{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr;gap:var(--s4)}
+  .headshot{max-width:260px}
+  .nav ul li:not(:last-child){display:none}
+}
+@media (max-width:600px){
+  .wrap{padding:0 var(--s2)}
+  .hero{padding:var(--s4) 0 var(--s8)}
+  .hero-grid{padding-left:52px}
+  .stripes{left:12px;width:32px}
+  .stripes i{width:10px}.stripes i:last-child{left:16px}
+  h2{font-size:34px}
+  .hero p.lead{font-size:19px;line-height:29px}
+  .nav-logo img{height:40px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="nav-logo" href="#top" aria-label="MSP Culture home"><img src="assets/logo-neon.svg" alt="MSP Culture" width="79" height="48"></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#toolkits">Toolkits</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a class="btn btn-primary btn-sm" href="#work-with-me">Work with me</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="stripes" aria-hidden="true"><i></i><i></i></div>
+    <div class="wrap hero-grid">
+      <div>
+        <h1 class="lockup">
+          <span class="l">Company</span><span class="b">Culture</span>
+          <span class="x" aria-label="times">×</span>
+          <span class="l">Technical</span><span class="b">Operations</span>
+        </h1>
+        <p class="lead">Toolkits, training and fractional leadership for MSPs that want their people and their processes pulling in the same direction.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#toolkits">Browse toolkits</a>
+          <a class="btn btn-ghost" href="#services">Work with me</a>
+        </div>
+      </div>
+      <img class="hero-logo" src="assets/logo-neon.svg" alt="" width="720" height="440">
+    </div>
+  </div>
+
+  <section id="toolkits">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Toolkits</p>
+        <h2>Need it running <span class="em">this week</span>?</h2>
+        <p>Field-tested templates and workflows from two decades of running MSP service delivery. Download, drop in your logo, and go.</p>
+      </div>
+      <div class="grid">
+        <article class="card paid">
+          <span class="tag">Toolkit</span>
+          <h3>New Hire Onboarding Kit</h3>
+          <p>A 90-day onboarding system for MSP technicians: new hire workbook, manager's guide, ConnectWise project template, and the process that ties them together.</p>
+          <a class="btn btn-primary btn-sm" href="GUMROAD_ONBOARDING_URL">Get notified</a>
+        </article>
+        <article class="card">
+          <span class="tag">Free</span>
+          <h3>Disaster Recovery Intake Workbook</h3>
+          <p>Hand it to an IT department and get back what you need to write a real DR plan. White-label ready.</p>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/MSPCulture/msp-culture">Download</a>
+        </article>
+        <article class="card">
+          <span class="tag">Free</span>
+          <h3>Client Relationship Health Assessment</h3>
+          <p>Score every client relationship before renewal season, not after the cancellation email.</p>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/MSPCulture/msp-culture">Download</a>
+        </article>
+        <article class="card">
+          <span class="tag">Free</span>
+          <h3>Ticket Timezone Warning</h3>
+          <p>A ConnectWise PSA userscript that warns techs when a ticket contact is outside business hours or on a holiday.</p>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/MSPCulture/msp-culture">Get it on GitHub</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Services</p>
+        <h2>Need someone <span class="em">in the room</span>?</h2>
+        <p>When a template isn't enough, I work directly with owners and managers to build it into how your shop actually runs.</p>
+      </div>
+      <div class="svc">
+        <article class="card">
+          <h3>Done-with-you builds</h3>
+          <ul>
+            <li>Interviews with your founders and managers</li>
+            <li>A toolkit customized to your stack and culture</li>
+            <li>Templates built in your PSA</li>
+            <li>Check-ins through your first real run</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Fractional CISO / CTO</h3>
+          <ul>
+            <li>Security program leadership for MSPs and their clients</li>
+            <li>CMMC, PCI DSS and compliance readiness</li>
+            <li>Service delivery turnarounds</li>
+            <li>Penetration tests and assessments</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Speaking &amp; workshops</h3>
+          <ul>
+            <li>Conference keynotes and breakouts</li>
+            <li>Leadership and culture workshops for MSP teams</li>
+            <li>Peer group and user group sessions</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <img class="headshot" src="assets/jordan-silva.jpg" alt="Jordan Silva" width="720" height="720">
+      <div>
+        <p class="label">About</p>
+        <h2>Who's behind this?</h2>
+        <p style="margin-top:var(--s2)">I'm Jordan Silva. I started on the helpdesk at a small MSP that still supported dial-up, and spent the next twenty years building and turning around managed services teams, from the NOC to the director's chair.</p>
+        <p>MSP Culture is where I share what worked: treating culture with the same rigor we give a security framework, and running operations so your people actually want to stay.</p>
+        <ul class="creds" aria-label="Credentials">
+          <li>CISSP</li><li>C|CISO</li><li>PMP</li><li>GSOM</li><li>GCFA</li><li>GCTI</li><li>GAWN</li><li>CMMC-RP</li><li>GIAC Advisory Board</li><li>IT Nation Connect speaker</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="work-with-me">
+    <div class="wrap closing">
+      <p class="label">Now what?</p>
+      <h2>Let's <span class="em">talk shop</span>.</h2>
+      <p>Thirty minutes, no pitch deck. Tell me what's broken and I'll tell you whether a toolkit, an engagement, or neither is the right fix.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="BOOKING_URL">Book a call</a>
+        <a class="btn btn-ghost" href="mailto:CONTACT_EMAIL">Email me</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="handle">@<span class="c">MSP</span><span class="m">Cult</span><span class="c">ure</span></div>
+        <div class="copy">© 2026 MSP Culture. Company culture × technical operations.</div>
+      </div>
+      <nav aria-label="Social">
+        <a href="https://www.youtube.com/@mspculture">YouTube</a>
+        <a href="LINKEDIN_URL">LinkedIn</a>
+        <a href="https://github.com/MSPCulture">GitHub</a>
+      </nav>
+      <div class="slashes" aria-hidden="true">////</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

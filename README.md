@@ -3,7 +3,10 @@
 Static site for MSP Culture. Plain HTML/CSS, no build step. Hosted on Cloudflare Workers (static assets); every push to `main` deploys, every branch gets a preview URL.
 
 ## Structure
-- `public/index.html`: the whole site (styles inline at the top)
+- `public/index.html`: the home page
+- `public/speaking.html`: talks, past events and press kit
+- `public/reading.html`: the leadership reading plan (12-month plan + executive top 5)
+- `public/assets/site.css`: shared styles for every page
 - `public/assets/`: logo (from the MSP Culture design system), headshot, social preview image
 - `public/_headers`: security headers
 - `wrangler.jsonc`: Cloudflare config (serves `public/` as static assets)

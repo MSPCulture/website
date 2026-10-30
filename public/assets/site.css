@@ -197,3 +197,5 @@ footer{border-top:1px solid var(--hairline);padding:var(--s4) 0 var(--s8)}
 }
 .sec-head.story{max-width:68ch}
 .sec-head.story p{color:var(--ink);margin-top:var(--s2)}
+.reading-hero h1{font-size:clamp(32px,3.6vw,46px);max-width:22ch}
+.reading-hero p.lead{font-size:19px;line-height:30px}

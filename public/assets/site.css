@@ -195,3 +195,5 @@ footer{border-top:1px solid var(--hairline);padding:var(--s4) 0 var(--s8)}
   .card,.exec li{break-inside:avoid;border:1px solid #ccc}
   .months{grid-template-columns:repeat(3,1fr)}
 }
+.sec-head.story{max-width:68ch}
+.sec-head.story p{color:var(--ink);margin-top:var(--s2)}
